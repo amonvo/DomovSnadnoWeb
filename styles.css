@@ -39,7 +39,7 @@ main {
     position: absolute;
     width: 300px; /* Velikost solárů */
     height: auto;
-    right: -180px; /* Soláry blíže k domku */
+    right: -220px; /* Soláry blíže k domku */
     top: 300px; /* Soláry níže vedle domu */
 }
 
