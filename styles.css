@@ -1,0 +1,69 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(255, 255, 255); /* Nastavení bílé barvy pozadí */
+    text-align: center;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    margin-bottom: 0;
+}
+
+main {
+    padding: 0;
+    margin: 0;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Zarovnáme vše k horní části stránky */
+    height: 100vh;
+}
+
+.house-container {
+    position: relative;
+    max-width: 80%; /* Velikost domku */
+    display: inline-block;
+}
+
+.house-svg {
+    width: 100%;
+    height: auto;
+    margin-bottom: 0px;
+}
+
+.solary-svg {
+    position: absolute;
+    width: 300px; /* Velikost solárů */
+    height: auto;
+    right: -180px; /* Soláry blíže k domku */
+    top: 300px; /* Soláry níže vedle domu */
+}
+
+.dolar-svg {
+    position: absolute;
+    width: 80px; /* Zmenšíme dolar */
+    height: auto;
+    right: -150px; /* Posuneme dolar ještě více k domku */
+    top: 580px; /* Dolar zůstane pod soláry */
+}
+
+.bagr-svg {
+    position: absolute;
+    width: 200px; /* Zvýšíme velikost traktoru pro lepší viditelnost */
+    height: auto;
+    left: 50px; /* Posuneme traktor více do středu stránky */
+    bottom: -130px; /* Traktor zůstane na stejné výškové úrovni jako kamení */
+}
+
+.kameni-svg {
+    position: absolute;
+    width: 200px;
+    height: auto;
+    left: 60%;
+    transform: translateX(-50%);
+    bottom: -130px; /* Pozice kamení zůstává stejná */
+}
