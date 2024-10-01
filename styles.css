@@ -51,13 +51,22 @@ main {
     top: 580px; /* Dolar zůstane pod soláry */
 }
 
+.strom-svg {
+    position: absolute;
+    width: 250px; /* Zmenšíme strom, aby byl menší než domek */
+    height: auto;
+    left: -150px; /* Posuneme strom blíže k domku a nad traktor */
+    bottom: 95px; /* Umístíme strom těsně nad traktor, níže */
+}
+
 .bagr-svg {
     position: absolute;
-    width: 200px; /* Zvýšíme velikost traktoru pro lepší viditelnost */
+    width: 300px; /* Velikost traktoru */
     height: auto;
-    left: 50px; /* Posuneme traktor více do středu stránky */
-    bottom: -130px; /* Traktor zůstane na stejné výškové úrovni jako kamení */
+    left: -100px;
+    bottom: -130px; /* Traktor zůstává na stejné výškové úrovni */
 }
+
 
 .kameni-svg {
     position: absolute;
