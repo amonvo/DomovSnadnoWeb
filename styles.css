@@ -1,78 +1,89 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Open Sans', sans-serif; /* Použití fontu Open Sans */
     margin: 0;
     padding: 0;
-    background-color: rgb(255, 255, 255); /* Nastavení bílé barvy pozadí */
+    background-color: rgb(255, 255, 255); /* Bílé pozadí */
     text-align: center;
 }
 
 header {
-    background-color: #333;
-    color: white;
-    padding: 10px;
+    background-color: #333; /* Tmavé pozadí hlavičky */
+    color: white; /* Bílý text */
+    padding: 10px; /* Vnitřní okraje */
     margin-bottom: 0;
+    font-weight: 600; /* Použití mírně tučnějšího fontu pro hlavičku */
+}
+
+h1 {
+    font-size: 2.5rem; /* Velikost hlavního nadpisu */
+    margin: 0;
+}
+
+p {
+    font-size: 1.2rem; /* Mírně větší podnadpis */
+    margin-top: 5px;
+    font-weight: 400; /* Normální váha pro podnadpis */
 }
 
 main {
     padding: 0;
     margin: 0;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start; /* Zarovnáme vše k horní části stránky */
-    height: 100vh;
+    position: relative; /* Umožníme absolutní pozicování uvnitř hlavní části */
+    display: flex; /* Použijeme flexbox pro rozmístění obsahu */
+    justify-content: center; /* Vycentrujeme obsah vodorovně */
+    align-items: flex-start; /* Obsah bude zarovnán k horní části stránky */
+    height: 100vh; /* Výška hlavní části bude 100 % výšky okna */
 }
 
 .house-container {
     position: relative;
-    max-width: 80%; /* Velikost domku */
-    display: inline-block;
+    max-width: 80%; /* Velikost domku bude maximálně 80 % šířky kontejneru */
+    display: inline-block; /* Vnitřní obsah bude zobrazen jako inline blok */
 }
 
 .house-svg {
-    width: 100%;
-    height: auto;
-    margin-bottom: 0px;
+    width: 100%; /* Domek bude zabírat 100 % dostupné šířky */
+    height: auto; /* Výška bude automaticky přizpůsobena poměru stran */
+    margin-bottom: 0px; /* Žádná mezera pod domkem */
 }
 
 .solary-svg {
     position: absolute;
-    width: 300px; /* Velikost solárů */
-    height: auto;
-    right: -220px; /* Soláry blíže k domku */
-    top: 300px; /* Soláry níže vedle domu */
+    width: 300px; /* Velikost solárních panelů */
+    height: auto; /* Automatické přizpůsobení výšky */
+    right: -220px; /* Posuneme soláry doprava, aby byly blíže k domku */
+    top: 300px; /* Umístíme soláry níže na stránku */
 }
 
 .dolar-svg {
     position: absolute;
-    width: 80px; /* Zmenšíme dolar */
-    height: auto;
-    right: -150px; /* Posuneme dolar ještě více k domku */
-    top: 580px; /* Dolar zůstane pod soláry */
+    width: 80px; /* Velikost ikony dolaru */
+    height: auto; /* Automatické přizpůsobení výšky */
+    right: -150px; /* Posuneme dolar blíže k domku */
+    top: 580px; /* Umístíme dolar pod soláry */
 }
 
 .strom-svg {
     position: absolute;
-    width: 250px; /* Zmenšíme strom, aby byl menší než domek */
-    height: auto;
-    left: -150px; /* Posuneme strom blíže k domku a nad traktor */
-    bottom: 95px; /* Umístíme strom těsně nad traktor, níže */
+    width: 250px; /* Velikost stromu bude menší než domek */
+    height: auto; /* Automatické přizpůsobení výšky */
+    left: -150px; /* Strom bude posunut vlevo, nad traktor */
+    bottom: 95px; /* Strom bude umístěn těsně nad traktorem */
 }
 
 .bagr-svg {
     position: absolute;
     width: 300px; /* Velikost traktoru */
-    height: auto;
-    left: -100px;
-    bottom: -130px; /* Traktor zůstává na stejné výškové úrovni */
+    height: auto; /* Automatické přizpůsobení výšky */
+    left: -100px; /* Traktor bude umístěn vlevo */
+    bottom: -130px; /* Traktor zůstane na stejné výškové úrovni jako předtím */
 }
-
 
 .kameni-svg {
     position: absolute;
-    width: 200px;
-    height: auto;
-    left: 60%;
-    transform: translateX(-50%);
-    bottom: -130px; /* Pozice kamení zůstává stejná */
+    width: 200px; /* Velikost kamení */
+    height: auto; /* Automatické přizpůsobení výšky */
+    left: 60%; /* Umístíme kamení doprostřed stránky */
+    transform: translateX(-50%); /* Vycentrujeme kamení horizontálně */
+    bottom: -130px; /* Kamení bude umístěno na spodní část stránky */
 }
