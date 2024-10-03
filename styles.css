@@ -1,28 +1,28 @@
 body {
-    font-family: 'Open Sans', sans-serif; /* Použití fontu Open Sans */
+    font-family: 'Open Sans', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: rgb(255, 255, 255); /* Bílé pozadí */
+    background-color: rgb(255, 255, 255);
     text-align: center;
 }
 
 header {
-    background-color: #333; /* Tmavé pozadí hlavičky */
-    color: white; /* Bílý text */
-    padding: 10px; /* Vnitřní okraje */
+    background-color: #333;
+    color: white;
+    padding: 10px;
     margin-bottom: 0;
-    font-weight: 600; /* Použití mírně tučnějšího fontu pro hlavičku */
+    font-weight: 600;
 }
 
 h1 {
-    font-size: 2.5rem; /* Velikost hlavního nadpisu */
+    font-size: 2.5rem;
     margin: 0;
 }
 
 p {
-    font-size: 1.2rem; /* Mírně větší podnadpis */
+    font-size: 1.2rem;
     margin-top: 5px;
-    font-weight: 400; /* Normální váha pro podnadpis */
+    font-weight: 400;
 }
 
 main {
@@ -31,13 +31,13 @@ main {
     position: relative;
     display: flex;
     justify-content: center;
-    align-items: flex-start; /* Zarovnáme vše k horní části stránky */
+    align-items: flex-start;
     height: 100vh;
 }
 
 .house-container {
     position: relative;
-    max-width: 80%; /* Velikost domku */
+    max-width: 60%;
     display: inline-block;
 }
 
@@ -49,34 +49,34 @@ main {
 
 .solary-svg {
     position: absolute;
-    width: 300px; /* Velikost solárů */
+    width: 250px;
     height: auto;
-    right: -280px; /* Soláry blíže k domku */
-    top: 300px; /* Soláry níže vedle domu */
+    right: -220px;
+    top: 400px;
 }
 
 .dolar-svg {
     position: absolute;
-    width: 80px; /* Zmenšíme dolar */
+    width: 80px;
     height: auto;
-    right: -150px; /* Posuneme dolar ještě více k domku */
-    top: 580px; /* Dolar zůstane pod soláry */
+    right: -150px;
+    top: 580px;
 }
 
 .strom-svg {
     position: absolute;
-    width: 250px; /* Zmenšíme strom, aby byl menší než domek */
+    width: 250px;
     height: auto;
-    left: -240px; /* Posuneme strom blíže k domku a nad traktor */
-    bottom: 95px; /* Umístíme strom těsně nad traktor, níže */
+    left: -240px;
+    bottom: 95px;
 }
 
 .bagr-svg {
     position: absolute;
-    width: 300px; /* Velikost traktoru */
+    width: 300px;
     height: auto;
     left: -270px;
-    bottom: -130px; /* Traktor zůstává na stejné výškové úrovni */
+    bottom: -130px;
 }
 
 .kameni-svg {
@@ -85,40 +85,40 @@ main {
     height: auto;
     left: 60%;
     transform: translateX(-50%);
-    bottom: -220px; /* Pozice kamení zůstává stejná */
+    bottom: -220px;
 }
 
-.left-window {
+/* Okno SVG vedle dveří */
+.okno-svg {
     position: absolute;
-    width: 150px;
-    height: 150px;
-    left: -150px;
-    top: 200px;
-    background-color: transparent; /* Prázdné okno, na které bude myš reagovat */
+    width: 120px;
+    height: auto;
+    left: 580px; /* Zachováno, jak jsi upravil */
+    top: 350px;
     cursor: pointer;
 }
 
-.tooltip {
-    display: none; /* Tooltip je skrytý, dokud na okno nenajede myš */
+/* Tooltip s obrázkem, zvětšený a posunutý více doleva a nahoru */
+.tooltip-right-window {
+    display: none;
     position: absolute;
-    top: 100px; /* Tooltip bude nad stromem */
-    left: -100px;
-    width: 250px;
-    height: 250px;
-    border-radius: 50%; /* Ořízneme do kruhu */
-    overflow: hidden; /* Ořízneme obsah mimo kruh */
+    top: -50px; /* Posunuto více nahoru */
+    right: 150px; /* Posunuto více doleva */
+    width: 300px; /* Zvýšená velikost tooltipu */
+    height: 300px;
+    border-radius: 50%;
+    overflow: hidden;
     background-color: white;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Jemný stín */
-    z-index: 100;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-
-.tooltip-image {
-    width: 100%; /* Obrázek bude mít šířku kontejneru */
+.tooltip-image-right {
+    width: 100%;
     height: 100%;
-    object-fit: cover; /* Zachová proporce obrázku */
+    object-fit: cover;
 }
 
-.left-window:hover + .tooltip {
-    display: block; /* Zobrazí tooltip při najetí myší na levé okno */
+/* Zobrazení tooltipu po najetí myší na okno */
+.okno-svg:hover + .tooltip-right-window {
+    display: block;
 }
