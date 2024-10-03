@@ -98,17 +98,18 @@ main {
     cursor: pointer;
 }
 
-/* Tooltip s obrázkem, zvětšený a posunutý více doleva a nahoru */
+/* Tooltip s obrázkem, zvětšený a posunutý více doprava a níže s černým okrajem */
 .tooltip-right-window {
     display: none;
     position: absolute;
-    top: -50px; /* Posunuto více nahoru */
-    right: 150px; /* Posunuto více doleva */
-    width: 300px; /* Zvýšená velikost tooltipu */
+    top: 50px; /* Posunuto více níže */
+    right: -300px; /* Posunuto o 5 cm doprava */
+    width: 300px;
     height: 300px;
     border-radius: 50%;
     overflow: hidden;
     background-color: white;
+    border: 5px solid black; /* Přidání tlusté černé čáry */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
@@ -117,6 +118,7 @@ main {
     height: 100%;
     object-fit: cover;
 }
+
 
 /* Zobrazení tooltipu po najetí myší na okno */
 .okno-svg:hover + .tooltip-right-window {
