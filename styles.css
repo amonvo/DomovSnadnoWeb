@@ -109,7 +109,7 @@ main {
     top: 340px;
 }
 
-/* Tooltip styl pro PokojSTAND */
+/* Tooltip styl pro obrázky v kruhu */
 .tooltip-right-window,
 .tooltip-left-window {
     display: none;
@@ -136,9 +136,10 @@ main {
     right: -300px;
 }
 
+
 .tooltip-left-window {
-    top: 50px;
-    left: -300px;
+    top: -200px; /* Posunuto více nahoru, aby nezasahovalo do stromu */
+    left: -450px; /* Posunuto více doleva, aby bylo dále od stromu */
 }
 
 /* Tooltip pro KoupelnaSTAND - zobrazí se při najetí na BocniOknoSTAND */
@@ -156,7 +157,8 @@ main {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-tooltip-image-right,
+
+.tooltip-image-right,
 .tooltip-image-left {
     width: 100%;
     height: 100%;
@@ -179,6 +181,6 @@ tooltip-image-right,
     display: block;
 }
 
-.bocni-okno-tooltip-container:hover .tooltip-left-window {
+.bocni-okno-svg:hover + .tooltip-left-window {
     display: block;
 }
