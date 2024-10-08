@@ -142,12 +142,9 @@ main {
     left: -450px; /* Posunuto více doleva, aby bylo dále od stromu */
 }
 
-/* Tooltip pro KoupelnaSTAND - zobrazí se při najetí na BocniOknoSTAND */
 .tooltip-left-window {
-    display: none;
-    position: absolute;
-    top: 50px;
-    left: -300px;
+    top: -50px; /* Posunuto více nahoru */
+    left: -500px; /* Posunuto více doleva */
     width: 300px;
     height: 300px;
     border-radius: 50%;
@@ -156,6 +153,7 @@ main {
     border: 5px solid black;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
+
 
 
 .tooltip-image-right,
