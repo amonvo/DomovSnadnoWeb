@@ -175,10 +175,15 @@ main {
     display: block;
 }
 
-.okno-tooltip-container:hover .tooltip-right-window {
+/* Zobrazení tooltipu po najetí myší na okno s animací */
+.okno-svg:hover + .tooltip-right-window {
     display: block;
+    animation-duration: 1s; /* Doba trvání animace */
+    animation-name: zoomIn; /* Použití efektu zoom */
 }
 
 .bocni-okno-svg:hover + .tooltip-left-window {
     display: block;
+    animation-duration: 1s; /* Doba trvání animace */
+    animation-name: zoomIn; /* bounceIn */
 }
