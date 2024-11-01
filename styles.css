@@ -1,5 +1,7 @@
 body {
-    font-family: 'Open Sans', sans-serif;
+    background-color: #da1799; /* Nastavte požadovanou barvu */
+    font-family: 'HL Grotesk', sans-serif;
+    font-size: 16px;
     margin: 0;
     padding: 0;
     background-color: rgb(255, 255, 255);
@@ -10,19 +12,29 @@ header {
     background-color: #333;
     color: white;
     padding: 10px;
-    margin-bottom: 0;
     font-weight: 600;
 }
 
-h1 {
-    font-size: 2.5rem;
-    margin: 0;
+.navbar {
+    background-color: #333;
+    overflow: hidden;
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px 0;
+    padding-right: 50px;
 }
 
-p {
-    font-size: 1.2rem;
-    margin-top: 5px;
-    font-weight: 400;
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 14px 20px;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.navbar a:hover {
+    background-color: #555;
 }
 
 main {
@@ -33,157 +45,22 @@ main {
     justify-content: center;
     align-items: flex-start;
     height: 100vh;
+    padding-top: 140px; /* Jemné přiblížení k horní části */
 }
 
 .house-container {
     position: relative;
-    max-width: 60%;
+    max-width: 100%;
     display: inline-block;
+    text-align: center;
+    transform: scale(1.5); /* Zvětšení o 150 % */
+    transform-origin: center; /* Udržení středu při zvětšení */
 }
 
 .house-svg {
-    width: 100%;
+    width: 70%; /* Zmenšení na 50 % původní šířky */
     height: auto;
     margin-bottom: 0px;
-}
-
-.solary-svg {
-    position: absolute;
-    width: 356px;
-    height: auto;
-    right: -300px;
-    top: 350px;
-}
-
-.dolar-svg {
-    position: absolute;
-    width: 100px;
-    height: auto;
-    right: -260px;
-    top: 600px;
-}
-
-.strom-svg {
-    position: absolute;
-    width: 350px; /* Zvětšeno, aby byl stromek větší */
-    height: auto;
-    left: -350px;
-    bottom: 23px;
-}
-
-
-.bagr-svg {
-    position: absolute;
-    width: 400px;
-    height: auto;
-    left: -270px;
-    bottom: -280px;
-}
-
-.kameni-svg {
-    position: absolute;
-    width: 200px;
-    height: auto;
-    left: 60%;
-    transform: translateX(-50%);
-    bottom: -220px;
-}
-
-/* Okno SVG vedle dveří */
-.okno-svg {
-    position: absolute;
-    width: 120px;
-    height: auto;
-    left: 580px; /* Zachováno, jak jsi upravil */
-    top: 350px;
-    cursor: pointer;
-}
-
-
-/* Boční okno SVG (levá strana od dveří) */
-.bocni-okno-svg {
-    position: absolute;
-    width: 100px; /* Zmenšeno pro menší velikost */
-    height: auto;
-    left: 50px; /* Posunuto vlevo od dveří */
-    top: 340px;
-}
-
-/* Tooltip styl pro obrázky v kruhu */
-.tooltip-right-window,
-.tooltip-left-window {
-    display: none;
-    position: absolute;
-    width: 300px;
-    height: 300px;
-    border-radius: 50%;
-    overflow: hidden;
-    background-color: white;
-    border: 5px solid black;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-
-
-.tooltip-image-right {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.tooltip-right-window {
-    top: 50px;
-    right: -300px;
-}
-
-
-.tooltip-left-window {
-    top: -200px; /* Posunuto více nahoru, aby nezasahovalo do stromu */
-    left: -450px; /* Posunuto více doleva, aby bylo dále od stromu */
-}
-
-.tooltip-left-window {
-    top: -50px; /* Posunuto více nahoru */
-    left: -500px; /* Posunuto více doleva */
-    width: 300px;
-    height: 300px;
-    border-radius: 50%;
-    overflow: hidden;
-    background-color: white;
-    border: 5px solid black;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-
-
-.tooltip-image-right,
-.tooltip-image-left {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-
-.tooltip-image-left {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-/* Zobrazení tooltipu po najetí myší na okno */
-.okno-svg:hover + .tooltip-right-window {
-    display: block;
-}
-
-/* Zobrazení tooltipu po najetí myší na okno s animací */
-.okno-svg:hover + .tooltip-right-window {
-    display: block;
-    animation-duration: 1s; /* Doba trvání animace */
-    animation-name: zoomIn; /* Použití efektu zoom */
-}
-
-.bocni-okno-svg:hover + .tooltip-left-window {
-    display: block;
-    animation-duration: 1s; /* Doba trvání animace */
-    animation-name: zoomIn; /* bounceIn */
+    position: relative;
+    left: 20%; /* Posun doprava o 20 % šířky kontejneru */
 }
