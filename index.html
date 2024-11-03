@@ -1,14 +1,13 @@
 <!DOCTYPE html>
 <html lang="cs">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Domov Snadno</title>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    <!-- Link to Animate.css -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLR0e7/5jLfdCQ/LZd3K6Nz9dW5f5GVZtH6C3f5xZt6" crossorigin="anonymous">
 </head>
 
 <body>
@@ -23,11 +22,43 @@
     </header>
 
     <main>
-        <div class="house-container">
-            <!-- Domek SVG -->
-            <object type="image/svg+xml" data="img/Domek-Final.svg" class="house-svg"></object>
-        </div>
-    </main>
-</body>
+        <!-- První sekce s domkem -->
+        <section class="section">
+            <div class="house-container">
+                <!-- Domek a ostatní prvky -->
+                <object type="image/svg+xml" data="img/Domek-Final.svg" class="house-svg"></object>
+                <object type="image/svg+xml" data="img/kameny.svg" class="kameny-svg"></object>
+                <object type="image/svg+xml" data="img/dollar.svg" class="dollar-svg"></object>
+                <object type="image/svg+xml" data="img/panely.svg" class="panely-svg"></object>
+                <object type="image/svg+xml" data="img/strom.svg" class="strom-svg"></object>
+                <object type="image/svg+xml" data="img/bagr.svg" class="bagr-svg"></object>
+                <object type="image/svg+xml" data="img/okno 2.svg" class="okno-leve-svg"></object>
+                <object type="image/svg+xml" data="img/okno 1.svg" class="okno-prave-svg"></object>
+            </div>
+            <div class="tree-text">
+                Najděte spolehlivé řemeslníky.
+            </div>
+            
+            <!-- Tlačítko pro přechod do druhé sekce -->
+            <button class="scroll-button" onclick="scrollToSection()">Hledat</button>
+        </section>
 
+         <!-- Druhá sekce s obsahem a kopiemi objektů -->
+         <section class="section">
+            <div class="house-container">
+                <!-- Kopie objektů pro druhou sekci -->
+                <object type="image/svg+xml" data="img/Domek-Final.svg" class="house-svg"></object>
+                <object type="image/svg+xml" data="img/kameny.svg" class="kameny-svg"></object>
+                <object type="image/svg+xml" data="img/dollar.svg" class="dollar-svg"></object>
+                <object type="image/svg+xml" data="img/panely.svg" class="panely-svg"></object>
+                <object type="image/svg+xml" data="img/strom.svg" class="strom-svg"></object>
+                <object type="image/svg+xml" data="img/bagr.svg" class="bagr-svg"></object>
+                <object type="image/svg+xml" data="img/okno 2.svg" class="okno-leve-svg"></object>
+                <object type="image/svg+xml" data="img/okno 1.svg" class="okno-prave-svg"></object>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
 </html>

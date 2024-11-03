@@ -1,15 +1,13 @@
-body {
-    background-image: url("img/Home.svg"); /* Nastavte cestu k obrázku */
-    background-size: cover; /* Roztáhne obrázek tak, aby pokryl celou obrazovku */
-    background-position: center; /* Vycentruje obrázek */
-    background-repeat: no-repeat; /* Zabrání opakování obrázku */
-    font-family: 'HL Grotesk', sans-serif;
-    font-size: 16px;
+body, html {
+    height: 100%;
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    font-family: 'HL Grotesk', sans-serif;
+    font-size: 16px;
     text-align: center;
 }
-
 
 header {
     background-color: #333;
@@ -41,29 +39,145 @@ header {
 }
 
 main {
-    padding: 0;
-    margin: 0;
-    position: relative;
     display: flex;
-    justify-content: center;
-    align-items: flex-start;
+    flex-direction: column;
+    height: 200vh;
+    scroll-snap-type: y mandatory;
+}
+
+.section {
     height: 100vh;
-    padding-top: 140px; /* Jemné přiblížení k horní části */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    scroll-snap-align: start;
 }
 
 .house-container {
     position: relative;
-    max-width: 100%;
-    display: inline-block;
-    text-align: center;
-    transform: scale(1.5); /* Zvětšení o 150 % */
-    transform-origin: center; /* Udržení středu při zvětšení */
+    width: 120vw;
+    max-width: 1310px;
+    transform: translate(10vw, -28vh);
+    bottom: -4vh;
 }
 
 .house-svg {
-    width: 70%; /* Zmenšení na 50 % původní šířky */
+    width: 100%;
     height: auto;
-    margin-bottom: 0px;
-    position: relative;
-    left: 20%; /* Posun doprava o 20 % šířky kontejneru */
+}
+
+.kameny-svg {
+    position: absolute;
+    bottom: -70%;
+    left: 25%;
+    width: 50%;
+}
+
+.dollar-svg {
+    position: absolute;
+    bottom: -70%;
+    right: -20%;
+    width: 50%;
+}
+
+.panely-svg {
+    position: absolute;
+    bottom: -18%;
+    right: -14%;
+    width: 60%;
+}
+
+.bagr-svg {
+    position: absolute;
+    bottom: -59%;
+    left: -30%;
+    width: 50%;
+}
+
+.okno-prave-svg {
+    position: absolute;
+    bottom: -15%;
+    right: 17%;
+    width: 50%;
+}
+
+.okno-leve-svg {
+    position: absolute;
+    bottom: -22%;
+    left: -15%;
+    width: 50%;
+}
+
+.strom-svg {
+    position: absolute;
+    bottom: -24%;
+    left: -40%;
+    width: 60%;
+}
+
+.scroll-button {
+    position: absolute;
+    bottom: 31%;
+    left: 23%;
+    transform: translateX(-50%);
+    padding: 15px 30px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    background-color: #333;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    z-index: 10;
+}
+
+.scroll-button:hover {
+    background-color: #555;
+    transform: scale(1.1);
+}
+
+/* Nastavení pozadí pro první sekci */
+.section:nth-child(1) {
+    background-image: url("img/Home1.svg");
+    background-size: 100% auto;
+    background-position: center 80%;
+    background-repeat: no-repeat;
+}
+
+/* Přidání stejného pozadí pro druhou sekci s oříznutím přesahujících objektů */
+.section:nth-child(2) {
+    background-image: url("img/Home1.svg");
+    background-size: 100% auto;
+    background-position: center 80%;
+    background-repeat: no-repeat;
+    overflow: hidden; /* Oříznutí přesahujících objektů */
+}
+
+/* Skrytí tlačítka ve druhé sekci */
+.section:nth-child(2) .scroll-button {
+    display: none;
+}
+
+/* Text přes strom */
+.tree-text {
+    position: absolute;
+    left: 10%;
+    bottom: 45%;
+    font-size: 5rem;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    z-index: 20;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
+}
+
+/* Třída pro skrytí textu */
+.hidden {
+    display: none;
+}
+
+/* Posunutí domku níže v druhé sekci */
+.section:nth-child(2) .house-container {
+    transform: translate(10vw, -15vh); /* Upraveno pro posunutí dolů */
 }
